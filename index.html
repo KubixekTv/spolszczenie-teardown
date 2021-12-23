@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Generator</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <center><span class="title">Teardown - zamiana liter na p0pi3rd0l0n3</span></center>
+            <div class="box">
+                <textarea id="input" class="type" placeholder="Wpierdol tutaj tekst i nie zadawaj pierdolonych pytań"></textarea>
+                <button onclick="Zamiana()">Przemiel słowa popierdolone</button>
+                <div class="output" id="output">Tutaj się wypierdoli tekst</div>
+                <center><span class="footer">Strona zrobiona przez KubixekaPierdolonegoTEFAŁ</span></center>
+            </div>
+        </div>
+        <script>
+            function Zamiana(){
+                var input = document.getElementById("input").value;
+                var text = input
+                .replaceAll("ą", "å")
+                .replaceAll("ę", "ñ")
+                .replaceAll("ć", "ä")
+                .replaceAll("ł", "â")
+                .replaceAll("ń", "á")
+                .replaceAll("ś", "à")
+                .replaceAll("ź", "ò")
+                .replaceAll("ż", "è")
+                .replaceAll("Ą", "Å")
+                .replaceAll("Ę", "Ñ")
+                .replaceAll("Ć", "Ä")
+                .replaceAll("Ł", "Â")
+                .replaceAll("Ń", "Á")
+                .replaceAll("Ś", "À")
+                .replaceAll("Ź", "Ò")
+                .replaceAll("Ż", "È");
+                document.getElementById("output").innerHTML = text;
+            }
+        </script>
+    </body>
+</html>
