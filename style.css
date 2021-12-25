@@ -7,14 +7,35 @@
 	src: url(bold.ttf);
 }
 body{
+	user-select: none;
 	transition: all 0.3s;
 	font-family: debil;
-	background-color: rgb(10, 10, 10);
+	animation: slideshow 60s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+	background-image: url(background1.jpg);
+}
+@keyframes slideshow{
+	0%{background-image: url(images/slideshow/background1.jpg);}
+	16%{background-image: url(images/slideshow/background2.jpg);}
+	32%{background-image: url(images/slideshow/background3.jpg);}
+	48%{background-image: url(images/slideshow/background4.jpg);}
+	64%{background-image: url(images/slideshow/background5.jpg);}
+	80%{background-image: url(images/slideshow/background6.jpg);}
+	100%{background-image: url(images/slideshow/background1.jpg);}
+}
+.xd{
+	animation: slideshow 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 .container{
+	transition: 0.3s;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+.container img{
+	overflow: hidden;
+	margin-bottom: -8px;
+	background-color: rgba(0, 0, 0, 0.8);
+	border-radius: 20px 20px 0px 0px;
 }
 .box{
 	margin-top: 5px;
@@ -22,32 +43,43 @@ body{
     padding: 30px 30px 10px 30px;
     color: white;
     font-size: 20px;
-    background-color: rgb(40, 40, 40);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 20px;
 }
 .box .type{
+	user-select: auto;
+	width: 99%;
+	border: none;
+	padding: 5px;
 	font-family: debil;
 	font-size: 20px;
-	height: 370px;
-	padding: 5px;
-	width: 100%;
+	height: 310px;
 	border-radius: 10px;
 	resize: none;
 }
 .box button{
-	font-family: bebil;
+	margin: 5px 0px 5px 0px;
+	cursor: pointer;
+	transition: 0.1s;
+	font-family: debil;
 	font-size: 20px;
-	text-transform: uppercase;
-	font-weight: bold;
 	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	outline: 2px solid white;
+	width: 45%;
+	color: white;
+	background-color: rgba(255, 255, 255, 0);
+}
+.box button:hover{
+	background-color: rgba(255, 255, 255, 0.1);
 }
 .box .output{
-	width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: white;
     color: black;
-    height: 370px;
+    height: 310px;
     border-radius: 10px;
     padding: 5px;
     user-select: all;
@@ -55,9 +87,11 @@ body{
 .title{
 	font-family: bebil;
 	text-transform: uppercase;
-	color: white;
+	text-align: center;
     font-size: 30px;
     font-weight: 900;
+	margin-top: -20px;
+	margin-bottom: 10px;
 }
 
 @media (min-width: 1200px) { 
@@ -66,8 +100,8 @@ body{
 	}
 }
 
-@media (max-width: 1200px) { 
+@media (max-width: 1200px){ 
     .container{
 		width: 100%;
 	}
-} 
+}

@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Generator</title>
+        <title>Zamiana liter na p0pi3rd0l0n3</title>
+        <link rel="icon" href="images/icon.png">
         <meta charset="utf-8">
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'> 
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
-            <center><span class="title">Teardown - zamiana liter na p0pi3rd0l0n3</span></center>
+            <center>
+                <img src="images/logo.png" height="100px"><br>
+            </center>
             <div class="box">
-                <textarea id="input" class="type" placeholder="Wpierdol tutaj tekst i nie zadawaj pierdolonych pytań"></textarea>
-                <button onclick="Zamiana()">Przemiel słowa popierdolone</button>
-                <div class="output" id="output">Tutaj się wypierdoli tekst</div>
-                <center><span class="footer">Strona zrobiona przez KubixekaPierdolonegoTEFAŁ</span></center>
+                <div class="title">zamiana liter na p0pi3rd0l0n3</div>
+                <span id="reset"><textarea id="input" class="type" placeholder="Wpi3rd0l tutaj tekst i nie zadawaj p0pi3rd0l0nych pytań"></textarea></span>
+                <center><button onclick="Zamiana()">Zamień słowa na p0pi3rd0l0n3</button>&nbsp;&nbsp;&nbsp;<button onclick="Reset()">Wypi3rd0l te słowa u góry</button></center>
+                <div class="output" id="output">Tutaj się wypi3rd0li tekst</div>
+                <center><span class="footer">Strona zrobiona przez KubixekaP0pi3rd0l0n3goTEFAŁ</span></center>
             </div>
+            <div class="xd"> </div>
         </div>
         <script>
+            function Reset(){
+                document.getElementById("reset").innerHTML = "<textarea id=\"input\" class=\"type\" placeholder=\"Wpi3rd0l tutaj tekst i nie zadawaj p0pi3rd0l0nych pytań\"></textarea>";
+            }
             function Zamiana(){
                 var input = document.getElementById("input").value;
                 var text = input
