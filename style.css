@@ -8,10 +8,9 @@
 }
 body{
 	user-select: none;
-	transition: all 0.3s;
 	font-family: debil;
 	animation: slideshow 60s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
-	background-image: url(background1.jpg);
+	background-image: url(images/slideshow/background1.jpg);
 }
 @keyframes slideshow{
 	0%{background-image: url(images/slideshow/background1.jpg);}
@@ -73,6 +72,12 @@ body{
 }
 .box button:hover{
 	background-color: rgba(255, 255, 255, 0.1);
+}
+.box button:active{
+	transform: scale(0.97);
+	color: gray;
+	outline-color: gray;
+	background-color: rgba(255, 255, 255, 0.05);
 }
 .box .output{
     margin-top: 5px;

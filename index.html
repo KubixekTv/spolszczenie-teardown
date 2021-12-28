@@ -22,10 +22,14 @@
             <div class="xd"> </div>
         </div>
         <script>
+			var audio = new Audio('sounds/click.ogg');
+		
             function Reset(){
+				audio.play();
                 document.getElementById("reset").innerHTML = "<textarea id=\"input\" class=\"type\" placeholder=\"Wpi3rd0l tutaj tekst i nie zadawaj p0pi3rd0l0nych pytań\"></textarea>";
             }
             function Zamiana(){
+				audio.play();
                 var input = document.getElementById("input").value;
                 var text = input
                 .replaceAll("ą", "å")
